@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Equipment Allocation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaZIMaurnnUnT8NFEb54eFxQ6G8VYZaaM"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <a href="#">🏠 Home</a>
+        <a href="#">📊 Analytics</a>
+        <a href="#">⚙️ Settings</a>
+        <button id="toggleDarkMode">🌙 Toggle Dark Mode</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Medical Equipment Allocation</h2>
+
+        <!-- Buttons -->
+        <div class="d-flex gap-3">
+            <button class="btn btn-success" onclick="loadSampleData()">🔹 Load Sample Data</button>
+            <button class="btn btn-primary" onclick="fetchAllocation()">⚡ Get Optimized Allocation</button>
+        </div>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchInput" class="form-control my-3" placeholder="Search Equipment...">
+        
+        <!-- Equipment Cards -->
+        <div class="row" id="equipmentContainer">
+            <!-- Data Fetched Dynamically -->
+        </div>
+
+        <!-- Allocation Results Table -->
+        <div class="mt-4">
+            <h5>Optimized Equipment Allocation</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Facility</th>
+                        <th>Allocated Equipment</th>
+                        <th>Transport Route</th>
+                    </tr>
+                </thead>
+                <tbody id="allocation-results">
+                    <tr>
+                        <td colspan="3" class="text-center">Click the button to fetch results</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Google Map -->
+        <div class="mt-4">
+            <h5>Equipment Location</h5>
+            <div id="map" style="height: 400px;"></div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
