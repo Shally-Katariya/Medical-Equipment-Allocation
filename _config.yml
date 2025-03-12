@@ -2,3 +2,8 @@ exclude:
   - node_modules
   - vendor
   - .jekyll-cache
+  - frontend/node_modules
+  - frontend/public
+  - package-lock.json
+  - package.json
+  - yarn.lock
